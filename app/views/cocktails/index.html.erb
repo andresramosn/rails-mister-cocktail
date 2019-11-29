@@ -1,0 +1,15 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1520615848885-9e3bf3da58f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1344&q=80);">
+  <div class="container">
+    <h1>Welcome!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+  </div>
+</div>
+
+<%@cocktails.each do |cocktail| %>
+<ul>
+ <li><%= link_to cocktail.name, "/cocktails/#{cocktail.id}" %></li>
+  </ul>
+<% end %>
+
+<%= link_to "+ add cocktail", new_cocktail_path, class: "btn btn-primary" %>
+
